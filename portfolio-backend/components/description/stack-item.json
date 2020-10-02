@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_description_stack_items",
+  "info": {
+    "name": "Stack_item",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
