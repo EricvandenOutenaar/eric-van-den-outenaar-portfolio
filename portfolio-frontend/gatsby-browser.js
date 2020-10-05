@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
         color: ${({ theme }) => theme.colors.grey3};
         line-height: 1.5;
         font-size: 0.875rem;
-        margin-top: 5rem;
+        margin-top: 0rem;
       }
       p {
         margin-bottom: 1.25rem;

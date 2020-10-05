@@ -3,8 +3,47 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
+import styled from "styled-components"
 // ...GatsbyImageSharpFluid
 
+const StyledHero = styled.header`
+  margin-top: -5rem;
+  padding-top: 5rem;
+  height: 100vh;
+  background: ${({ theme }) => theme.colors.white};
+  position: relative;
+`
+const HeroSection = styled.section`
+  width: 90vw;
+  margin: 0 auto;
+  max-width: ${({ theme }) => theme.widths.maxWidth};
+  height: 100%;
+  display: grid;
+  align-items: center;
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+`
+
+const ImageWrapper = styled.div`
+ 
+  display: none;
+ 
+@media screen and (min-width: 992px) {
+    display: block;
+    grid-column: 1/span 4;
+    grid-row: 2 / span 2;
+`
+
+const HeroInfo = styled.article`
+  background: ${({ theme }) => theme.colors.white};
+  @media screen and (min-width: 992px) {
+    grid-column: 5 / span 8;
+    grid-row: 3 / auto;
+  }
+`
 const query = graphql`
   {
     file(relativePath: { eq: "hero-img.png" }) {
@@ -27,68 +66,21 @@ const Hero = () => {
   // console.log(data)
 
   return (
-    <header className="hero">
-      <div className="section-center hero-center">
-        <article className="hero-info">
+    <StyledHero>
+      <HeroSection>
+        <HeroInfo>
           <div>
             <h1>I'm Eric</h1>
-            <div className="underline"></div>
             <h4>Studying to become a software developer</h4>
-            - 🔭 I’m currently working on my own Portfolio site
             <br />
-            - 🌱 I am also currently working on React app at Cybercom
-            <br />
-            - 🤔 I would love to work within frontend
-            <br />
-            - 💬 I have worked for many years as a journalist
-            <br />
-            - 😄 Decided to change careers to become software developer <br />-
-            💜{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://strapi.io/documentation/v3.x/getting-started/introduction.html"
-            >
-              Strapi
-            </a>
-            ,{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://reactjs.org/docs/getting-started.html"
-            >
-              React
-            </a>
-            ,{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.gatsbyjs.org/docs/"
-            >
-              Gatsby
-            </a>{" "}
-            ,{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://styled-components.com/docs"
-            >
-              Styled Components
-            </a>
-            <br />
-            - ⚡ Fun fact: I got to interview Elon Musk
-            <br />
-            - 📫 How to reach me: use the link below :)
-            <br />
-            <Link to="/contact" className="btn">
-              kontakta mig
-            </Link>
             <SocialLinks />
           </div>
-        </article>
-        <Image fluid={fluid} className="hero-img" />
-      </div>
-    </header>
+        </HeroInfo>
+        <ImageWrapper>
+          <Image fluid={fluid} alt="portrait-image-eric-van-den-outenaar" />
+        </ImageWrapper>
+      </HeroSection>
+    </StyledHero>
   )
 }
 export default Hero

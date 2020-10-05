@@ -7,15 +7,17 @@ import styled from "styled-components"
 // I have have changed this Navbar component so it has styled components
 
 const StyledNavBar = styled.nav`
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
+  border-style: none none solid none;
+  border-width: 0rem 0rem 0.01rem 0rem;
   height: 5rem;
   display: flex;
   align-items: center;
   z-index: 200;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.primary8};
 `
 
 const NavCenter = styled.div`
