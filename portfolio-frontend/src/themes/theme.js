@@ -15,6 +15,7 @@ export default {
     primary8: "hsl(184, 80%, 74%)",
     primary9: "hsl(185, 94%, 87%)",
     primary10: "hsl(186, 100%, 94%)",
+    primary11: "#00306c",
     /* darkest grey - used for headings */
     grey1: "hsl(209, 61%, 16%)",
     grey3: "hsl(209, 34%, 30%)",
@@ -45,5 +46,9 @@ export default {
   widths: {
     maxWidth: "1170px",
     fixedWidth: "700px",
+  },
+  // this is a general class / section
+  section: {
+    padding: "5rem 0",
   },
 }

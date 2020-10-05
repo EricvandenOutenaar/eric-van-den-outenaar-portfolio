@@ -17,7 +17,7 @@ const StyledNavBar = styled.nav`
   display: flex;
   align-items: center;
   z-index: 200;
-  background: ${({ theme }) => theme.colors.primary8};
+  background: ${({ theme }) => theme.colors.primary11};
 `
 
 const NavCenter = styled.div`
@@ -54,7 +54,7 @@ const NavLink = styled.div`
       }
       a {
         text-transform: capitalize;
-        color: ${({ theme }) => theme.colors.grey1};
+        color: ${({ theme }) => theme.colors.white};
         font-weight: bold;
         letter-spacing: ${({ theme }) => theme.spacings.spacing};
         transition: ${({ theme }) => theme.transitions.transition};

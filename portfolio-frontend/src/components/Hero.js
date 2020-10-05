@@ -63,8 +63,6 @@ const Hero = () => {
     },
   } = useStaticQuery(query)
 
-  // console.log(data)
-
   return (
     <StyledHero>
       <HeroSection>
