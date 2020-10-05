@@ -29,6 +29,9 @@ export default {
     redlight: "hsl(360, 71%, 66%)",
     white: "#fff",
   },
+  transitions: {
+    transition: "all 0.3s linear",
+  },
   spacings: {
     spacing: "0.2rem",
   },
