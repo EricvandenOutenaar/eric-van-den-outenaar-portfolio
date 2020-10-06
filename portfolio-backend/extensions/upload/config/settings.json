@@ -1,0 +1,8 @@
+{
+  "provider": "cloudinary",
+  "providerOptions": {
+    "cloud_name": "dax4vpbox",
+    "api_key": "666639111876898",
+    "api_secret": "ULj9eqlIbZ1o_KTCl7GO3Eb_C08"
+  }
+}
