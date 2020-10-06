@@ -15,6 +15,7 @@ const styledP = styled.div`
 export default ({ data }) => {
   const {
     allStrapiProjects: { nodes: projects },
+    allStrapiBlogs: { nodes: blogs },
   } = data
   return (
     <>
@@ -23,6 +24,7 @@ export default ({ data }) => {
         <Services />
         <Jobs />
         <Projects projects={projects} title="projekt i fokus" showLink />
+        <Blogs blogs={blogs} title="Senaste artiklar" showLink />
       </Layout>
       <styledP>
         <p>Test p tag</p>
@@ -51,6 +53,24 @@ export const query = graphql`
         stack {
           id
           title
+        }
+      }
+    }
+    allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
+      nodes {
+        slug
+        content
+        desc
+        date(locale: "sv", formatString: "DD MMM YYYY")
+        id
+        title
+        category
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
