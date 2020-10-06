@@ -37,7 +37,10 @@
       "type": "enumeration",
       "enum": [
         "react",
-        "javascript"
+        "javascript",
+        "security",
+        "sass",
+        "pug"
       ],
       "required": true
     },
