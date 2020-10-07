@@ -1,5 +1,5 @@
 import React from "react"
-import { Underline } from "../elements/SmallElements"
+import { Underline } from "../elements/Underline"
 import styled from "styled-components"
 
 const StyledTitle = styled.div`
@@ -7,6 +7,7 @@ const StyledTitle = styled.div`
   text-align: center;
   font-style: italic;
 `
+// The title that will be placed above each section
 
 const Title = ({ title }) => {
   return (

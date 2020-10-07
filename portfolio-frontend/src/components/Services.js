@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "./Title"
 import services from "../constants/services"
-import { Underline } from "../elements/SmallElements"
+import { Underline } from "../elements/Underline"
 import styled from "styled-components"
 
 // check in services constants - part needs to be modified to syled components
