@@ -1,14 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 /*
-     I have created a button component out of the global class 
-     I could have also added this button styling in the global styles 
-     but I would have had to create a component for the center button anyhow. 
-     I have to decided to make one button component that can either be a 'standard'
-     button or a center button.
+     I have created a button/link component out of the global classes called 'btn' and 'center-btn'
+     The 
 */
-const StyledButton = styled.button`
+
+const StyledButtonLink = styled(props => <Link {...props} />)`
 
     text-transform: uppercase;
     background:  ${({ theme }) => theme.colors.primary5};;
@@ -36,6 +35,12 @@ const StyledButton = styled.button`
 
 `
 
-export const Button = ({ center }) => {
-  return <StyledButton center={center}></StyledButton>
+const ButtonLink = ({ center, to, name }) => {
+  return (
+    <StyledButtonLink to={to} center={center}>
+      {name}
+    </StyledButtonLink>
+  )
 }
+
+export default ButtonLink

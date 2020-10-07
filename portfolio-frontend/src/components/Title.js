@@ -1,5 +1,5 @@
 import React from "react"
-import { Underline } from "../elements/Underline"
+import { Underline } from "./Underline"
 import styled from "styled-components"
 
 const StyledTitle = styled.div`

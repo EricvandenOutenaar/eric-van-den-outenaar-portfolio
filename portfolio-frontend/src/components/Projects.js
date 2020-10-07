@@ -2,21 +2,24 @@ import React from "react"
 import Title from "./Title"
 import Project from "./Project"
 import { Link } from "gatsby"
+import OuterContentContainer from "./OuterContentContainer"
+import InnerContentContainer from "./InnerContentContainer"
+
 const Projects = ({ projects, title, showLink }) => {
   return (
-    <section className="section projects">
+    <OuterContentContainer>
       <Title title={title} />
-      <div className="section-center projects-center">
+      <InnerContentContainer type="projects">
         {projects.map((project, index) => {
           return <Project key={project.id} index={index} {...project} />
         })}
-      </div>
+      </InnerContentContainer>
       {showLink && (
         <Link to="/projects" className="btn center-btn">
           Alla projekt
         </Link>
       )}
-    </section>
+    </OuterContentContainer>
   )
 }
 
