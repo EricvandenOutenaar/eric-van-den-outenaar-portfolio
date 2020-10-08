@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import styled from "styled-components"
-
+// Here we create a project
 const StyledProject = styled.article`
   display: grid;
   margin-bottom: 4rem;
