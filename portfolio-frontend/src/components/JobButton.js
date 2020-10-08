@@ -19,8 +19,7 @@ const StyledJobButton = styled.button`
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary5};
-    box-shadow: ${({ theme }) => `0 2px ${theme.colors.primary5}`};
-  }
+    box-shadosetValue(index)
 
   @media screen and (min-width: 992px) {
     margin-bottom: 1rem;

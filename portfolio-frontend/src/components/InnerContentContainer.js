@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 /* 
     I give the width a default of 90vw, but we can set the width per Innercontainer if needed
-    This container is placed in the OuterContentContainer and under the Title 
+    This container is placed inside the OuterContentContainer and under the Title 
     Depending on the section and screensize we turn the grid of and on in a certain way... 
 */
 const StyledInnerContainer = styled.div`

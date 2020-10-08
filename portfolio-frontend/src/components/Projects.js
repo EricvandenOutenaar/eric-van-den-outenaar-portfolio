@@ -1,9 +1,9 @@
 import React from "react"
 import Title from "./Title"
 import Project from "./Project"
-import { Link } from "gatsby"
 import OuterContentContainer from "./OuterContentContainer"
 import InnerContentContainer from "./InnerContentContainer"
+import ButtonLink from "./ButtonLink"
 
 const Projects = ({ projects, title, showLink }) => {
   return (
@@ -14,11 +14,7 @@ const Projects = ({ projects, title, showLink }) => {
           return <Project key={project.id} index={index} {...project} />
         })}
       </InnerContentContainer>
-      {showLink && (
-        <Link to="/projects" className="btn center-btn">
-          Alla projekt
-        </Link>
-      )}
+      {showLink && <ButtonLink to="/projects" center name="Alla projekt" />}
     </OuterContentContainer>
   )
 }

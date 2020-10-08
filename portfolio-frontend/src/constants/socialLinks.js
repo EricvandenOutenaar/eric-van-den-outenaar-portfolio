@@ -10,7 +10,7 @@ import {
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+    icon: <FaFacebookSquare></FaFacebookSquare>,
     url: "https://www.twitter.com",
   },
   {
