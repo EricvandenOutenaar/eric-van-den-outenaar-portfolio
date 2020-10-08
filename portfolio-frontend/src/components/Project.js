@@ -3,51 +3,48 @@ import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import styled from "styled-components"
+
 // Here we create a project
-const StyledProject = styled.article`
-  display: grid;
-  margin-bottom: 4rem;
 
-  @media screen and (min-width: 992px) {
-    .project {
-      grid-template-columns: repeat(12, 1fr);
-      align-items: center;
-    }
-
-    img {
-      grid-column: 1 / span 8;
-      /* grid-column-end: 8; */
-      grid-row: 1 / 1;
-      height: 30rem;
-      border-radius: var(--radius);
-      box-shadow: var(--dark-shadow);
-    }
-  }
-`
 const StyledImage = styled(props => <Image {...props} />)`
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
+  border-top-left-radius: ${({ theme }) => theme.radius.radius};
+  border-top-right-radius: ${({ theme }) => theme.radius.radius};
   height: 19rem;
   z-index: 1;
-}
-&::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, var(--clr-primary-5), #222);
-  opacity: 0.85;
-  transition: var(--transition);
-} 
+
+  ::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom right,
+      ${({ theme }) => theme.colors.primary5},
+      #222
+    );
+    opacity: 0.85;
+    transition: ${({ theme }) => theme.transitions.transition};
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 22rem;
+  }
+  @media screen and (min-width: 992px) {
+    grid-column: ${({ index }) => (index % 2 === 0 ? "5/-1" : "1 / span 8")};
+    grid-row: 1 / 1;
+    height: 30rem;
+    border-radius: ${({ theme }) => theme.radius.radius};
+    box-shadow: ${({ theme }) => theme.shadows.darkShadow};
+  }
 `
 
 const ProjectInfo = styled.div`
-  background: var(--clr-white);
+  background: ${({ theme }) => theme.colors.white};
   padding: 1rem 2rem;
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+  border-bottom-left-radius: ${({ theme }) => theme.radius.radius};
+  border-bottom-right-radius: ${({ theme }) => theme.radius.radius};
 
   h3 {
     font-weight: 500;
@@ -55,41 +52,86 @@ const ProjectInfo = styled.div`
     font-size: 1.5rem;
   }
   @media screen and (min-width: 992px) {
-    border-radius: var(--radius);
-    box-shadow: var(--dark-shadow);
+    border-radius: ${({ theme }) => theme.radius.radius};
+    box-shadow: ${({ theme }) => theme.shadows.darkShadow};
     z-index: 1;
-    grid-column: ${({ index }) => (index % 2 === 0 ? "5 / 12" : "2 / span 7")};
+    grid-column: ${({ index }) => (index % 2 !== 0 ? "5 / 12" : "2 / span 7")};
     grid-row: 1 / 1;
     text-align: ${({ index }) => index % 2 === 0 && "left"};
   }
 `
+
+const StyledProject = styled.article`
+  display: grid;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+
+  :hover ${StyledImage} ::after {
+    opacity: 0;
+  }
+`
+
+const ProjectNumber = styled.div`
+  display: inline-block;
+  font-size: 1.25rem;
+  color: ${({ theme }) => theme.colors.primary5};
+  margin-bottom: 0.75rem;
+`
+
+const ProjectLinks = styled.div`
+  a {
+    color: ${({ theme }) => theme.colors.primary5};
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    transition: ${({ theme }) => theme.transitions.transition};
+    :hover {
+      color: ${({ theme }) => theme.colors.primary1};
+    }
+  }
+`
+const ProjectStack = styled.div`
+  span {
+    margin-bottom: 1rem;
+    display: inline-block;
+    background: ${({ theme }) => theme.colors.grey9};
+    color: ${({ theme }) => theme.colors.grey5};
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: ${({ theme }) => theme.radius.radius};
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+  }
+`
 const Project = ({ description, title, github, stack, url, image, index }) => {
   return (
-    <article className="project">
-      {/* if image is not supplied, instead of breaking, dont show any image */}
+    <StyledProject>
       {image && (
-        <Image fluid={image.childImageSharp.fluid} className="project-img" />
+        <StyledImage fluid={image.childImageSharp.fluid} index={index} />
       )}
       <ProjectInfo index={index}>
-        <span className="project-number">0{index + 1}.</span>
-        {/* if title is not supplied, set a defualt title */}
+        <ProjectNumber>0{index + 1}.</ProjectNumber>
         <h3>{title || "Projekt"}</h3>
-        <p className="project-description">{description}</p>
-        <div className="project-stack">
+        <p>{description}</p>
+        <ProjectStack>
           {stack.map(item => {
             return <span key={item.id}>{item.title}</span>
           })}
-        </div>
-        <div className="project-links">
+        </ProjectStack>
+        <ProjectLinks>
           <a href={github}>
-            <FaGithubSquare className="project-icon" />
+            <FaGithubSquare />
           </a>
           <a href={url}>
-            <FaShareSquare className="project-icon" />
+            <FaShareSquare />
           </a>
-        </div>
+        </ProjectLinks>
       </ProjectInfo>
-    </article>
+    </StyledProject>
   )
 }
 

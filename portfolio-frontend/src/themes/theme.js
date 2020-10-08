@@ -51,4 +51,4 @@ export default {
   section: {
     padding: "5rem 0",
   },
-}
+  }
