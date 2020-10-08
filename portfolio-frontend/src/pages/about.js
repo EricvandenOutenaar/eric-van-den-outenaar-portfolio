@@ -17,7 +17,6 @@ const About = ({
   const { info, stack, title, image } = nodes[0]
   return (
     <Layout>
-     
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />
@@ -32,17 +31,17 @@ const About = ({
             </div>
 
             <div className="btn cv">
-              <a href={downloadFile} download>Ladda ner fullständig CV</a>{` `}
+              <a href={downloadFile} download>
+                Ladda ner fullständig CV
+              </a>
+              {` `}
             </div>
-            <Link to='/contact' className="btn">
+            <Link to="/contact" className="btn">
               kontakta mig
-                        </Link>
+            </Link>
           </article>
         </div>
-        <>
-
-
-        </>
+        <></>
       </section>
     </Layout>
   )
