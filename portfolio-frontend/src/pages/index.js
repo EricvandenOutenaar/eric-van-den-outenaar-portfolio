@@ -7,6 +7,7 @@ import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import { Test } from "../components/Test"
 import Blogs from "../components/Blogs"
+import SEO from "../components/SEO"
 import styled from "styled-components"
 
 const styledP = styled.div`
@@ -20,6 +21,7 @@ export default ({ data }) => {
   return (
     <>
       <Layout>
+        <SEO title="Hem" description="Startsidan" />
         <Hero />
         <Services />
         <Jobs />

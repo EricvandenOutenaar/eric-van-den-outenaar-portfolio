@@ -17,6 +17,7 @@ const About = ({
   const { info, stack, title, image } = nodes[0]
   return (
     <Layout>
+      <SEO title="CV" description="Erics CV" />
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />

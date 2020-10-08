@@ -10,6 +10,7 @@ const ComponentName = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} description={desc} />
       <section className="blog-template">
         <div className="section-center">
           <article className="blog-content">
