@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 const data = [
   {
     id: 1,
@@ -28,6 +29,43 @@ const data = [
   },
 ]
 
+const StyledList = styled.ul`
+ li {
+   opacity:0;
+  animation: slideRight 0.5s ease-in-out 0.3s forwards;
+   }
+
+ li:nth-of-type(1) {
+  animation-delay: 0.25s;
+  }
+li:nth-of-type(2) {
+  animation-delay: 0.5s;
+ }
+li:nth-of-type(3) {
+  animation-delay: 0.75s;
+  }
+li:nth-of-type(4) {
+  animation-delay: 1s;
+  }
+ li:nth-of-type(5) {
+  animation-delay: 1.25s;
+  }
+a {
+  display: block;   
+  text-align: center;
+  text-transform: capitalize;
+  color: ${({theme})=> theme.colors.grey5};
+  letter-spacing:${({theme})=> theme.spacings.spacing};
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  transition: ${({theme})=> theme.transitions.transition};
+  border-radius: ${({theme})=> theme.radius.radius};
+ :hover {
+    background: ${({theme})=> theme.colors.primary9};
+    color: ${({theme})=> theme.colors.primary5};
+}
+`
+ 
 const tempLinks = data.map(link => {
   return (
     <li key={link.id}>
@@ -36,10 +74,12 @@ const tempLinks = data.map(link => {
   )
 })
 
-export default ({ styleClass }) => {
+export default ({type="navbar"}) => {
   return (
-    <ul className={`page-links ${styleClass ? styleClass : ""}`}>
+      type==="sidebar"?
+    <StyledList>
       {tempLinks}
-    </ul>
+    </StyledList> : 
+    <ul>{tempLinks}</ul>
   )
 }

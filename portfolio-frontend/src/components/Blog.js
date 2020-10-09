@@ -9,19 +9,19 @@ import styled from "styled-components"
 const StyledBlog = styled.article`
   display: block;
   margin-bottom: 2rem;
-  background: var(--clr-grey-10);
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-  transition: var(--transition);
+  background: ${({ theme }) => theme.colors.grey10};
+  border-radius: ${({ theme }) => theme.radius.radius};
+  box-shadow: ${({ theme }) => theme.shadows.lightShadow};
+  transition: ${({ theme }) => theme.transitions.transition};
 }
  :hover {
-  box-shadow: var(--dark-shadow);
+  box-shadow: ${({ theme }) => theme.shadows.darkShadow};
   transform: scale(1.02);
 }
 `
 const StyledImage = styled(props => <Image {...props} />)`
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
+  border-top-left-radius: ${({ theme }) => theme.radius.radius};
+  border-top-right-radius:  ${({ theme }) => theme.radius.radius};
   height: 15rem;
 
   @media screen and (min-width: 576px) {
@@ -38,7 +38,7 @@ const BlogCard = styled.div`
   padding: 1.5rem 1rem;
 
   h4 {
-    color: var(--clr-grey-1);
+    color: ${({ theme }) => theme.colors.grey1};
   }
 `
 const Footer = styled.div`
@@ -50,15 +50,15 @@ const Footer = styled.div`
   p {
     margin-bottom: 0;
     font-weight: bold;
-    color: var(--clr-grey-5);
+    color: ${({ theme }) => theme.colors.grey5};
   }
   p:first-of-type {
     display: inline-block;
-    background: var(--clr-grey-9);
-    color: var(--clr-grey-5);
+    background: ${({ theme }) => theme.colors.grey9};
+    color: ${({ theme }) => theme.colors.grey5};
     margin-right: 0.5rem;
     padding: 0.25rem 0.5rem;
-    border-radius: var(--radius);
+    border-radius: ${({ theme }) => theme.radius.radius};
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.85rem;

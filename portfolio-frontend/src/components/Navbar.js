@@ -1,7 +1,7 @@
 import React from "react"
 import logo from "../assets/logo.svg"
 import { FaAlignRight } from "react-icons/fa"
-import PageLinks from "../constants/links"
+import Links from "../constants/links"
 import styled from "styled-components"
 
 // I have have changed this Navbar component so it has styled components
@@ -72,30 +72,30 @@ const ToggleButton = styled.button`
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-primary-5);
+  color: ${({ theme }) => theme.colors.primary5};
   cursor: pointer;
-  transition: var(--transition);
+  transition: ${({ theme }) => theme.transitions.transition};
 
   &:hover {
-    color: var(--clr-primary-2);
+    color: ${({ theme }) => theme.colors.primary2};
   }
 
   @media screen and (min-width: 768px) {
     display: none;
   }
 `
-export const Navbar = () => {
+export const Navbar = ({ toggleSidebar }) => {
   return (
     <StyledNavBar>
       <NavCenter>
         <NavHeader>
           <img src={logo} alt="logo" />
-          <ToggleButton>
+          <ToggleButton  onClick={toggleSidebar}>
             <FaAlignRight></FaAlignRight>
           </ToggleButton>
         </NavHeader>
         <NavLink>
-          <PageLinks></PageLinks>
+          <Links type="navbar"/>
         </NavLink>
       </NavCenter>
     </StyledNavBar>

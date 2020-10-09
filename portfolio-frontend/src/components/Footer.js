@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <SocialLinks styleClass="footer-links"></SocialLinks>
+        <SocialLinks type="footer"></SocialLinks>
         <h4>
           copyright&copy; {new Date().getFullYear()} | &nbsp;
           <span>Eric van den Outenaar</span> | all rights reserved
