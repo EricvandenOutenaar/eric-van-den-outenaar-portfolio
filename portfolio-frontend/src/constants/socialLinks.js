@@ -24,9 +24,6 @@ const data = [
   },
 ]
 
-const StyledSocialLink = styled.a`
-  
-`
 
   
 const links = data.map(link => {
@@ -41,11 +38,11 @@ const links = data.map(link => {
 
 const StyledList = styled.ul`
   margin: ${({ type }) =>
-          type === "footer" ? "1rem auto 0rem 0rem" : "1rem 0 0 0"}
+    type === "footer" ? "1rem auto 0rem 0rem" : "1rem 0 0 0"}
   width: 10rem;
   display: flex;
   justify-content: ${({ type }) =>
-  type === "footer" ? "center" : "flex-start"};
+    type === "footer" ? "center" : "flex-start"};
   font-size: 1.75rem;
 
   a {
@@ -60,8 +57,9 @@ const StyledList = styled.ul`
   }
 
   li {
-    opacity: 0;
-    animation: slideUp 0.5s ease-in-out 0.3s forwards;
+    opacity: ${({ type }) => (type === "footer" ? "1" : "0")};
+    animation: ${({ type }) =>
+      type !== "footer" && "slideUp 0.5s ease-in-out 0.3s forwards"};
   }
   li:nth-of-type(1) {
     animation-delay: 0.25s;
@@ -80,8 +78,6 @@ const StyledList = styled.ul`
   }
 `
 
-export default ({type}) => {
-  return (
-    <StyledList type={type}>{links}</StyledList>
-  )
+export default ({ type = "default" }) => {
+  return <StyledList type={type}>{links}</StyledList>
 }
