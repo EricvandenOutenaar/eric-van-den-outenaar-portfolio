@@ -40,20 +40,23 @@ const links = data.map(link => {
 })
 
 const StyledList = styled.ul`
-  margin-top: 1rem;
+  margin: ${({ type }) =>
+          type === "footer" ? "1rem auto 0rem 0rem" : "1rem 0 0 0"}
   width: 10rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${({ type }) =>
+  type === "footer" ? "center" : "flex-start"};
   font-size: 1.75rem;
-  
-  a{
+
+  a {
     font-size: 1.75rem;
-  color: ${({  theme, type  })  => type==="footer" ? theme.colors.white : theme.colors.grey1 };
-  transition: ${({  theme  })  => theme.transitions.transition};
-  :hover {
-      color: ${({  theme  })  => theme.colors.primary5};
-  
-  }
+    color: ${({ theme, type }) =>
+      type === "footer" ? theme.colors.white : theme.colors.grey1};
+    transition: ${({ theme }) => theme.transitions.transition};
+    padding: 0 1rem 0 0;
+    :hover {
+      color: ${({ theme }) => theme.colors.primary5};
+    }
   }
 
   li {

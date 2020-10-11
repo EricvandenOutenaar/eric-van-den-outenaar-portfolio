@@ -7,7 +7,7 @@ const StyledContactPage = styled.section`
   display: grid;
   place-items: center;
   padding: 5rem 0;
-  background: ${({ theme }) => theme.colors.grey5};
+  background: ${({ theme }) => theme.colors.grey10};
   min-height: calc(100vh - 5rem - 9rem);
 `
 const StyledContactForm = styled.article`

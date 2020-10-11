@@ -3,7 +3,13 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Projects from "../components/Projects"
 import SEO from "../components/SEO"
+import styled from "styled-components"
 // ...GatsbyImageSharpFluid
+
+const ProjectsContainer = styled.section`
+  background: ${({ theme }) => theme.colors.grey10};
+  min-height: calc(100vh - 5rem - 9rem);
+`
 
 const ProjectsPage = ({
   data: {
@@ -14,9 +20,9 @@ const ProjectsPage = ({
     <Layout>
 
 <SEO title="Projekt" description="Projektsidan" />
-      <section className="project-page">
+      <ProjectsContainer>
         <Projects projects={projects} title="Alla projekt" />
-      </section>
+      </ProjectsContainer>
     </Layout>
   )
 }
