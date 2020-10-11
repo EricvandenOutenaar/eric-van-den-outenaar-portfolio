@@ -41,6 +41,6 @@ const ButtonLink = ({ center, to, name }) => {
       {name}
     </StyledButtonLink>
   )
-}
+} 
 
 export default ButtonLink

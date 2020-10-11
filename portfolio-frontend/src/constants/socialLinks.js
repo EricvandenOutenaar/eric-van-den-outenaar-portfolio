@@ -25,20 +25,16 @@ const data = [
 ]
 
 const StyledSocialLink = styled.a`
-  font-size: 1.75rem;
-  color: ${({theme})=> theme.colors.grey1};
-  transition: ${({theme})=> theme.transitions.transition};
-  :hover {
-  color: ${({theme})=> theme.colors.primary5};}
+  
 `
 
   
 const links = data.map(link => {
   return (
     <li key={link.id}>
-      <StyledSocialLink href={link.url}>
+      <a href={link.url}>
         {link.icon}
-      </StyledSocialLink>
+      </a>
     </li>
   )
 })
@@ -49,10 +45,15 @@ const StyledList = styled.ul`
   display: flex;
   justify-content: space-between;
   font-size: 1.75rem;
-  color: ${({theme})=> theme.colors.grey1};
-  transition: ${({theme})=> theme.transitions.transition};
+  
+  a{
+    font-size: 1.75rem;
+  color: ${({  theme, type  })  => type==="footer" ? theme.colors.white : theme.colors.grey1 };
+  transition: ${({  theme  })  => theme.transitions.transition};
   :hover {
-  color: ${({theme})=> theme.colors.primary5};
+      color: ${({  theme  })  => theme.colors.primary5};
+  
+  }
   }
 
   li {
@@ -68,7 +69,7 @@ const StyledList = styled.ul`
   li:nth-of-type(3) {
     animation-delay: 0.75s;
   }
-   li:nth-of-type(4) {
+  li:nth-of-type(4) {
     animation-delay: 1s;
   }
   li:nth-of-type(5) {
@@ -78,6 +79,6 @@ const StyledList = styled.ul`
 
 export default ({type}) => {
   return (
-    <StyledList>{links}</StyledList>
+    <StyledList type={type}>{links}</StyledList>
   )
 }

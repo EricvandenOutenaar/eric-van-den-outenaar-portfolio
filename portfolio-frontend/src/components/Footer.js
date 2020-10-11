@@ -1,8 +1,28 @@
 import React from "react"
 import SocialLinks from "../constants/socialLinks"
+import styled from "styled-components"
+
+const StyledFooter = styled.footer`
+  height: 9rem;
+  background: #222;
+  text-align: center;
+  display: grid;
+  place-items: center;
+
+  h4 {
+    margin-top: 0.5rem;
+    color: ${({ theme }) => theme.colors.white};
+    font-weight: normal;
+    text-transform: uppercase;
+    span {
+      color: ${({ theme }) => theme.colors.primary5};
+    }
+  }
+`
+
 const Footer = () => {
   return (
-    <footer className="footer">
+    <StyledFooter>
       <div className="footer-content">
         <SocialLinks type="footer"></SocialLinks>
         <h4>
@@ -10,8 +30,8 @@ const Footer = () => {
           <span>Eric van den Outenaar</span> | all rights reserved
         </h4>
       </div>
-    </footer>
-  )
+    </StyledFooter>
+  ) 
 }
 
 export default Footer

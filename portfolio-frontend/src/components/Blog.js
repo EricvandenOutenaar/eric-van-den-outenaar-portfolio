@@ -18,10 +18,10 @@ const StyledBlog = styled.article`
   box-shadow: ${({ theme }) => theme.shadows.darkShadow};
   transform: scale(1.02);
 }
-`
-const StyledImage = styled(props => <Image {...props} />)`
+` 
+const StyledImage = styled( props => <Image {...props} />)`
   border-top-left-radius: ${({ theme }) => theme.radius.radius};
-  border-top-right-radius:  ${({ theme }) => theme.radius.radius};
+  border-top-right-radius: ${({ theme }) => theme.radius.radius};
   height: 15rem;
 
   @media screen and (min-width: 576px) {

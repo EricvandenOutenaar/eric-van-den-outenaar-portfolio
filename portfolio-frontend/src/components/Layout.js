@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from "react"
 // import "../css/main.css"
 import { Navbar } from "./Navbar"
-import { Test } from "./Test"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 
@@ -18,7 +17,6 @@ const Layout = ({ children }) => {
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       {children}
       <Footer />
-      <Test />
     </>
   )
 }

@@ -51,4 +51,9 @@ export default {
   section: {
     padding: "5rem 0",
   },
-  }
+  // create generic values for setting minimal page heights
+  nonIndex: {
+    minHeight: "calc(100vh - 5rem - 9rem)",
+    background: "var(--clr-grey-10)",
+  },
+}

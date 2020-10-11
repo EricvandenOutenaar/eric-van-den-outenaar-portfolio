@@ -1,4 +1,4 @@
-import "./src/css/main.css"
+//import "./src/css/main.css"
 import React from "react"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import Theme from "./src/themes/theme"
@@ -77,8 +77,48 @@ const GlobalStyles = createGlobalStyle`
         }
       }
       
-        
+      @keyframes slideRight {
+        0% {
+          transform: translateX(-200px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideUp {
+        0% {
+          transform: translateY(200px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      button {
+          text-transform: uppercase;
+          background: ${({ theme }) => theme.colors.primary5};
+          color: ${({ theme }) => theme.colors.primary9};
+          padding: 0.375rem 0.75rem;
+          letter-spacing: ${({ theme }) => theme.spacings.spacing};
+          display: inline-block;
+          font-weight: 700;
+          -webkit-transition: ${({ theme }) => theme.transitions.transition};
+          transition: ${({ theme }) => theme.transitions.transition};
+          font-size: 0.875rem;
+          border: 2px solid transparent;
+          cursor: pointer;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          border-radius: ${({ theme }) => theme.radius.radius};
       
+       :hover {
+          color: ${({ theme }) => theme.colors.primary1};
+          background: ${({ theme }) => theme.colors.primary8};
+        }
+
+      }
       p {
         margin-bottom: 1.25rem;
         color: ${({ theme }) => theme.colors.grey3};
