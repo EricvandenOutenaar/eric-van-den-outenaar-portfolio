@@ -6,20 +6,26 @@ const StyledJobButton = styled.button`
   border-color: transparent;
   text-transform: capitalize;
   font-size: 1.25rem;
+  font-weight: ${({ theme }) => theme.fontWeight.normal};
   letter-spacing: ${({ theme }) => theme.spacings.spacing};
   margin: 0 0.5rem;
   transition: ${({ theme }) => theme.transitions.transition};
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
+  border-radius: 0;
 
-  color: ${({ active, theme }) => active && theme.colors.primary5};
+  color: ${({ active, theme }) =>
+   
+   
+   
+    active ? theme.colors.primary5 : theme.colors.grey1};
   box-shadow: ${({ active, theme }) =>
     active && `0 2px ${theme.colors.primary5}`};
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary5};
-    box-shadosetValue(index)
+    box-shadow:  ${({ theme }) => `2px ${theme.colors.primary5}`};
 
   @media screen and (min-width: 992px) {
     margin-bottom: 1rem;

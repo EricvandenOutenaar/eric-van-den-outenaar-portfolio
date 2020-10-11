@@ -4,6 +4,10 @@ export default {
     secondary: "Open Sans, sans-serif",
     code: "Roboto Mono, monospace",
   },
+  fontWeight: {
+    normal: "400",
+    bold: "700",
+  },
   colors: {
     primary1: "hsl(184, 91%, 17%)",
     primary2: "hsl(185, 84%, 25%)",
