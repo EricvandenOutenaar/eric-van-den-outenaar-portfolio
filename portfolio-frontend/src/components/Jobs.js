@@ -11,6 +11,7 @@ import styled from "styled-components"
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 4rem;
   @media screen and (min-width: 992px) {

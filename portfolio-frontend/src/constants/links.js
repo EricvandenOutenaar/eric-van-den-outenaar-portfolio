@@ -4,32 +4,32 @@ import styled from "styled-components"
 const data = [
   {
     id: 1,
-    text: "home",
+    text: "hem",
     url: "/",
   },
   {
     id: 2,
-    text: "about",
+    text: "mitt cv",
     url: "/about/",
   },
   {
     id: 3,
-    text: "projects",
+    text: "projekt",
     url: "/projects/",
   },
   {
     id: 4,
-    text: "blog",
+    text: "blogg",
     url: "/blog/",
   },
   {
     id: 5,
-    text: "contact",
+    text: "kontakt",
     url: "/contact/",
   },
 ]
 
-const StyledList = styled.ul`
+const StyledSideBarList = styled.ul`
  li {
    opacity:0;
   animation: slideRight 0.5s ease-in-out 0.3s forwards;
@@ -65,7 +65,11 @@ a {
     color: ${({theme})=> theme.colors.primary5};
 }
 `
- 
+const StyledNavBarList = styled.ul`
+   a{
+     font-size: 1rem;
+   }
+` 
 const tempLinks = data.map(link => {
   return (
     <li key={link.id}>
@@ -77,9 +81,9 @@ const tempLinks = data.map(link => {
 export default ({type="navbar"}) => {
   return (
       type==="sidebar"?
-    <StyledList>
+    <StyledSideBarList>
       {tempLinks}
-    </StyledList> : 
-    <ul>{tempLinks}</ul>
+    </StyledSideBarList> : 
+    <StyledNavBarList>{tempLinks}</StyledNavBarList>
   )
 }

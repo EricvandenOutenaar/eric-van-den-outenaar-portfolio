@@ -41,19 +41,25 @@ const AboutTextContainer = styled.article`
   p {
     line-height: 2;
   }
+  button {
+    margin: 0 2rem 0 0;
+    a {
+      color: ${({ theme }) => theme.colors.white};
+    }
+  }
 `
 const StyledStack = styled.div`
   span {
-  display: inline-block;
-  background: ${({ theme }) => theme.colors.grey9};
-  color: ${({ theme }) => theme.colors.grey5};
-  margin: 0.5rem 0.5rem 0 0;
-  padding: 0.25rem 0.5rem;
-  border-radius: ${({ theme }) => theme.radius.radius};
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
-}
+    display: inline-block;
+    background: ${({ theme }) => theme.colors.grey9};
+    color: ${({ theme }) => theme.colors.grey5};
+    margin: 0.5rem 0.5rem 1rem 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: ${({ theme }) => theme.radius.radius};
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+  }
 `
 
 const About = ({
@@ -70,8 +76,8 @@ const About = ({
         <AboutContentContainer>
           <StyledAboutImage fluid={image.childImageSharp.fluid} />
           <AboutTextContainer>
-            {/* <Title title={title} />
-                <p>{info}</p> */}
+             {/* <Title title={title} */}
+            {/*<p>{info}</p>*/}
             <ReactMarkdown source={info} />
             <StyledStack>
               {stack.map(item => {
@@ -85,7 +91,7 @@ const About = ({
               </a>
               {` `}
             </button>
-            <ButtonLink name="kontakta mig" to="/contact"   />
+            <ButtonLink name="kontakta mig" to="/contact" />
           </AboutTextContainer>
         </AboutContentContainer>
         <></>

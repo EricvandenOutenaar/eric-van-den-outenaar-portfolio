@@ -8,7 +8,7 @@ const StyledJobButton = styled.button`
   font-size: 1.25rem;
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   letter-spacing: ${({ theme }) => theme.spacings.spacing};
-  margin: 0 0.5rem;
+  margin: 0.3rem 0.5rem;
   transition: ${({ theme }) => theme.transitions.transition};
   cursor: pointer;
   padding: 0.25rem 0;
@@ -16,9 +16,6 @@ const StyledJobButton = styled.button`
   border-radius: 0;
 
   color: ${({ active, theme }) =>
-   
-   
-   
     active ? theme.colors.primary5 : theme.colors.grey1};
   box-shadow: ${({ active, theme }) =>
     active && `0 2px ${theme.colors.primary5}`};

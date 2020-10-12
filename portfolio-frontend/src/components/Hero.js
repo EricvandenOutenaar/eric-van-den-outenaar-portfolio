@@ -39,6 +39,10 @@ const ImageWrapper = styled.div`
 
 const HeroInfo = styled.article`
   background: ${({ theme }) => theme.colors.white};
+  h1,
+  h4 {
+    text-transform: none;
+  }
   @media screen and (min-width: 992px) {
     grid-column: 5 / span 8;
     grid-row: 3 / auto;
@@ -68,8 +72,8 @@ const Hero = () => {
       <HeroSection>
         <HeroInfo>
           <div>
-            <h1>I'm Eric</h1>
-            <h4>Studying to become a software developer</h4>
+            <h1>Jag heter Eric</h1>
+            <h4>Din nya systemutvecklare</h4>
             <br />
             <SocialLinks />
           </div>

@@ -34,12 +34,18 @@ const NavCenter = styled.div`
 `
 const NavHeader = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-
   img {
-    margin-bottom: 0.375rem;
+    display: none;
   }
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    img {   
+      display: block;
+      margin-bottom: 0.375rem;
+      }
+    }
 `
 // This can be simplified later
 const NavLink = styled.div`
