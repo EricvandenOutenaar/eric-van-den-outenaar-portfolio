@@ -1,5 +1,8 @@
 import React from "react"
+import { globalHistory } from "@reach/router"
 import { Link } from "gatsby"
+
+
 import styled from "styled-components"
 const data = [
   {
@@ -30,26 +33,26 @@ const data = [
 ]
 
 const StyledSideBarList = styled.ul`
- li {
-   opacity:0;
+li {
+  opacity:0;
   animation: slideRight 0.5s ease-in-out 0.3s forwards;
-   }
+}
 
- li:nth-of-type(1) {
+li:nth-of-type(1) {
   animation-delay: 0.25s;
-  }
+}
 li:nth-of-type(2) {
   animation-delay: 0.5s;
- }
+}
 li:nth-of-type(3) {
   animation-delay: 0.75s;
-  }
+}
 li:nth-of-type(4) {
   animation-delay: 1s;
-  }
- li:nth-of-type(5) {
+}
+li:nth-of-type(5) {
   animation-delay: 1.25s;
-  }
+}
 a {
   display: block;   
   text-align: center;
@@ -60,30 +63,41 @@ a {
   font-size: 2rem;
   transition: ${({theme})=> theme.transitions.transition};
   border-radius: ${({theme})=> theme.radius.radius};
- :hover {
+  :hover {
     background: ${({theme})=> theme.colors.primary9};
     color: ${({theme})=> theme.colors.primary5};
-}
-`
-const StyledNavBarList = styled.ul`
-   a{
-     font-size: 1rem;
-   }
-` 
-const tempLinks = data.map(link => {
-  return (
-    <li key={link.id}>
+  }
+  `
+  const StyledNavBarList = styled.ul`
+  a{
+    font-size: 1rem;
+  }
+  ` 
+  const tempLinks = data.map(link => {
+    return (
+      <li key={link.id}>
       <Link to={link.url}>{link.text}</Link>
     </li>
   )
 })
 
 export default ({type="navbar"}) => {
-  return (
-      type==="sidebar"?
+  const path = globalHistory.location.pathname
+  console.log("path test", path)
+  return type === "sidebar" ? (
     <StyledSideBarList>
-      {tempLinks}
-    </StyledSideBarList> : 
+      {data.map(link => 
+        path !== link.url ? (
+          <li key={link.id}>
+            <Link to={link.url}>{link.text}</Link>
+          </li>
+        ) : (
+          <></>
+        )
+      )}
+    </StyledSideBarList>
+  ) : (
     <StyledNavBarList>{tempLinks}</StyledNavBarList>
   )
-}
+  }
+  

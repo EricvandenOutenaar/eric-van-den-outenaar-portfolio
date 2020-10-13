@@ -40,8 +40,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <SidebarButton onClick={toggleSidebar}>
         <FaTimes />
       </SidebarButton>
-      {isOpen && <Links type="sidebar"/>}
-        <SocialLinks/>
+      {isOpen && <Links closeSidebar={toggleSidebar} type="sidebar" />}
+      <SocialLinks />
     </StyledSidebar>
   )
 }
