@@ -18,8 +18,7 @@ const ProjectsPage = ({
 }) => {
   return (
     <Layout>
-
-<SEO title="Projekt" description="Projektsidan" />
+      <SEO title="Projekt" description="Projektsidan" />
       <ProjectsContainer>
         <Projects projects={projects} title="Alla projekt" />
       </ProjectsContainer>
