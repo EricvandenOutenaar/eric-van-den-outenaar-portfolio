@@ -11,7 +11,7 @@ module.exports = {
     author: "@ericvandenoutenaar",
     twitterUsername: "@EricOutenaar",
     image: "/twitter-img.png",
-    siteUrl: "https://ericvandenoutenaar-portfolio.netlify.app",
+    siteUrl: "https://eric-vanden-outenaar-portfolio.netlify.app",
   },
   plugins: [
     `gatsby-transformer-sharp`,
