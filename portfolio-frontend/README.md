@@ -5,6 +5,8 @@
 3. Limit amount of components - better overview
 4. React Icons
 
+Describe how to install
+
 [react icons] :https://react-icons.github.io/react-icons/
 
 ```javascript
