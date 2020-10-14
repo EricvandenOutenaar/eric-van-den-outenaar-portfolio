@@ -10,8 +10,7 @@ const StyledBlogTemplate = styled.section`
   background: ${({ theme }) => theme.colors.grey10};
   min-height: calc(100vh - 5rem - 9rem);
 
-  padding: 5rem;
-
+  padding: 2rem;
   h1,
   h2 {
     text-align: center;
@@ -47,15 +46,21 @@ const StyledBlogTemplate = styled.section`
     height: 20rem;
     margin: 3rem 0;
   }
-`
-
+  @media screen and (min-width: 992px) {
+    padding: 5rem;
+    img{
+      width: 30rem;
+    }
+  }
+  `
+  
 const ContentContainer = styled.div`
-  width: 90vw;
+  width: 100%;
   margin: 0 auto;
   max-width: 1170px;
   @media screen and (min-width: 992px) {
     width: 80vw;
-}
+  }
 `
 
 const ComponentName = ({ data }) => {
