@@ -12,7 +12,7 @@ const data = [
   },
   {
     id: 2,
-    text: "mitt cv",
+    text: "mitt CV",
     url: "/about/",
   },
   {
