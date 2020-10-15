@@ -1,7 +1,8 @@
 import React from "react"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
+import ButtonLink from "./ButtonLink"
+import {Underline}   from "./Underline"
 import SocialLinks from "../constants/socialLinks"
 import styled from "styled-components"
 // ...GatsbyImageSharpFluid
@@ -72,16 +73,25 @@ const Hero = () => {
       <HeroSection>
         <HeroInfo>
           <div>
-            <h1>Jag heter Eric</h1>
+            <h1>Jag heter Eric </h1>
+            <Underline hero/> 
             <h4>Din nya systemutvecklare</h4>
+            - 🔭 Jag är i mitt sista år av utbildningen Systemutvecklare.net
             <br />
+            - 🌱 Jobbar extra som React-utvecklare hos ett konsultföretag
+            <br />
+            - 🤔 Intresserad av att läre mer om både frontend och backend
+            <br />
+            <div style={{ marginBottom: "1rem" }} />
+            <ButtonLink to="/contact" name="Kontakta mig" />
+            <div style={{ marginBottom: "1rem" }} />
             <SocialLinks />
           </div>
         </HeroInfo>
         <ImageWrapper>
           <Image fluid={fluid} alt="portrait-image-eric-van-den-outenaar" />
         </ImageWrapper>
-      </HeroSection>
+          </HeroSection>
     </StyledHero>
   )
 }

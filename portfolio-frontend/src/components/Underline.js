@@ -1,3 +1,4 @@
+import React from "react"
 import styled from "styled-components"
 
 /* 
@@ -5,11 +6,12 @@ import styled from "styled-components"
     It is used on different places on the website
 */
 
-export const Underline = styled.div`
-  width: 5rem;
-  height: 0.25rem;
-  margin-bottom: 1.25rem;
-  background: var(--clr-primary-5);
-  margin-left: auto;
-  margin-right: auto;
-`
+const StyledUnderline = styled.div`
+         width: ${({ hero }) => hero ? '7rem' : '5rem'};
+         height: 0.25rem;
+         background: ${({ theme }) => theme.colors.primary5};
+         margin: ${({ hero }) => `0 ${hero ? "0" : "auto"} 1.25rem`};
+       `
+export const Underline = ({hero}) => {
+  return (<StyledUnderline hero={hero}/>)
+}
