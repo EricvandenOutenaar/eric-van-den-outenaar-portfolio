@@ -76,11 +76,11 @@ const Hero = () => {
             <h1>Jag heter Eric </h1>
             <Underline hero/> 
             <h4>Din nya systemutvecklare</h4>
-            - 🔭 Jag är i mitt sista år av utbildningen Systemutvecklare.net
+            - 🔭 Jag läser till Systemutvecklare.net
             <br />
-            - 🌱 Jobbar extra som React-utvecklare hos ett konsultföretag
+            - 🌱 Jobbar extra som React-utvecklare 
             <br />
-            - 🤔 Intresserad av att läre mer om både frontend och backend
+            - 🤔 Intresserad av både frontend och backend
             <br />
             <div style={{ marginBottom: "1rem" }} />
             <ButtonLink to="/contact" name="Kontakta mig" />

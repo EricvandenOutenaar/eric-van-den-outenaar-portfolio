@@ -32,7 +32,7 @@ const StyledImage = styled(props => <Image {...props} />)`
     height: 22rem;
   }
   @media screen and (min-width: 992px) {
-    grid-column: ${({ index }) => (index % 2 === 0 ? "5/-1" : "1 / span 8")};
+    grid-column: ${({ index }) => (index % 2 !== 0 ? "5/-1" : "1 / span 8")};
     grid-row: 1 / 1;
     height: 30rem;
     border-radius: ${({ theme }) => theme.radius.radius};
@@ -55,7 +55,7 @@ const ProjectInfo = styled.div`
     border-radius: ${({ theme }) => theme.radius.radius};
     box-shadow: ${({ theme }) => theme.shadows.darkShadow};
     z-index: 1;
-    grid-column: ${({ index }) => (index % 2 !== 0 ? "5 / 12" : "2 / span 7")};
+    grid-column: ${({ index }) => (index % 2 === 0 ? "5 / 12" : "2 / span 7")};
     grid-row: 1 / 1;
     text-align: ${({ index }) => index % 2 === 0 && "left"};
   }
