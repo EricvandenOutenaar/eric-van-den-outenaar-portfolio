@@ -3,6 +3,8 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import styled from "styled-components"
 
+// Here we define the contact page and make use of formspree
+
 const StyledContactPage = styled.section`
   display: grid;
   place-items: center;

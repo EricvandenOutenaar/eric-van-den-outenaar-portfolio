@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
 import styled from "styled-components"
-// ...GatsbyImageSharpFluid
 
 const StyledBlogContainer = styled.section`
   background: ${({ theme }) => theme.colors.grey10};

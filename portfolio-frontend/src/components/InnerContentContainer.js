@@ -2,9 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 /* 
-    I give the width a default of 90vw, but we can set the width per Innercontainer if needed
-    This container is placed inside the OuterContentContainer and under the Title 
-    Depending on the section and screensize we turn the grid of and on in a certain way... 
+    I will set the default width to 90vw, but create an option to
+    set the width per Innercontainer manually. 
+    This container is placed inside the OuterContentContainer 
+    and under the Title-component.  
+    Depending on the type of the section and on the screensize,
+    we manipulate the grid in different ways. 
 */
 const StyledInnerContainer = styled.div`
   width: ${({ width = "90vw" }) => width};

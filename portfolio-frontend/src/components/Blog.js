@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-// Here we create an individual blogpost
+// The component holds one blogpost card 
 
 const StyledBlog = styled.article`
   display: block;
@@ -72,7 +72,7 @@ const Blog = ({ id, title, image, date, category, slug, desc }) => {
         {image && <StyledImage fluid={image.childImageSharp.fluid} />}
         <BlogCard>
           {/* if title is not supplied, set a defualt title */}
-          <h4>{title || "Ariklar"}</h4>
+          <h4>{title || "Artiklar"}</h4>
           <p>{desc}</p>
           <Footer>
             <p>{category}</p>

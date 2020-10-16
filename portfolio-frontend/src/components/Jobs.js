@@ -8,6 +8,8 @@ import JobButton from "./JobButton"
 import ButtonLink from "./ButtonLink"
 import styled from "styled-components"
 
+// Here we define the Jobs section 
+
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;

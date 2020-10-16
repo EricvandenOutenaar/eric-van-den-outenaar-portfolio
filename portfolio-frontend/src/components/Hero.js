@@ -5,7 +5,8 @@ import ButtonLink from "./ButtonLink"
 import {Underline}   from "./Underline"
 import SocialLinks from "../constants/socialLinks"
 import styled from "styled-components"
-// ...GatsbyImageSharpFluid
+
+// Here we define the Hero component 
 
 const StyledHero = styled.header`
   margin-top: -5rem;
@@ -29,7 +30,6 @@ const HeroSection = styled.section`
 `
 
 const ImageWrapper = styled.div`
- 
   display: none;
  
 @media screen and (min-width: 992px) {

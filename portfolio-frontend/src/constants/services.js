@@ -1,6 +1,8 @@
 import React from "react"
 import { FaCode, FaSketch, FaAndroid } from "react-icons/fa"
 
+// Hard coded services 
+
 const iconStyle = {
   fontSize: "2rem",
   marginBottom: "1.5rem",

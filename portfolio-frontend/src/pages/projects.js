@@ -4,7 +4,8 @@ import { graphql } from "gatsby"
 import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 import styled from "styled-components"
-// ...GatsbyImageSharpFluid
+
+// Here we define the projects page
 
 const ProjectsContainer = styled.section`
   background: ${({ theme }) => theme.colors.grey10};

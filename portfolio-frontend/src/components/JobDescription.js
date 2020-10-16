@@ -15,8 +15,12 @@ const StyledJobDescription = styled.div`
   }
 `
 
+/*
+ In this component we need to get access to the color property 
+ from Theme.js via the useContext-hook
+ in order to set the inline style
+*/
 const JobDescription = ({ name }) => {
-  // We need to get access to the color property from theme.js
   const { colors } = useContext(ThemeContext)
 
   return (

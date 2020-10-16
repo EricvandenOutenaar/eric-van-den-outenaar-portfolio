@@ -3,6 +3,8 @@ import Layout from "../components/Layout"
 import styled from "styled-components"
 import ButtonLink from "../components/ButtonLink"
 
+// Our 404 page
+
 const StyledErrorPage = styled.main`
   background: ${({ theme }) => theme.colors.grey10};
   min-height: calc(100vh - 5rem - 9rem);

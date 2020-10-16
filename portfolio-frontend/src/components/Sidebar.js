@@ -4,6 +4,12 @@ import SocialLinks from "../constants/socialLinks"
 import { FaTimes } from "react-icons/fa"
 import styled from "styled-components"
 
+/* 
+  Here we create the dropdown menu in the form of an sidebar
+  I created an aside, but maybe that is not the correct semantic
+  element in this case.
+*/
+
 const StyledSidebar = styled.aside`
   background: ${({ theme }) => theme.colors.grey10};
   position: fixed;

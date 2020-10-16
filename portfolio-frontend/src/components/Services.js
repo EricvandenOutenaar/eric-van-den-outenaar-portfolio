@@ -5,8 +5,12 @@ import OuterContentContainer from "./OuterContentContainer"
 import InnerContentContainer from "./InnerContentContainer"
 import Service from "./Service"
 
-// This component will contain the services section
-
+/*
+ This component defines the services section
+ I always try to break down a component into smaller ones.
+ Service is an example of that. Almost always when you map over 
+ a piece of JSX you can create a component out of that.  
+*/
 const Services = () => {
   return (
     <OuterContentContainer grey>

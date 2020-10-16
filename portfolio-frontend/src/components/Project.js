@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import styled from "styled-components"
 
-// Here we create a project
+// Here we create one 'Project in focus'
 
 const StyledImage = styled(props => <Image {...props} />)`
   border-top-left-radius: ${({ theme }) => theme.radius.radius};
@@ -123,27 +123,27 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
           })}
         </ProjectStack>
         <ProjectLinks>
-          {/*If I don't links my projects - in db gave it a home link - 
-          then I will not display a social link for now */}
-          {github   !==   "/" && (((
-                <a href={github} target="_blank">
-                  <FaGithubSquare />
-                </a>
-          )))}
-          {url   !==   "/" && (((
-                <a href={url}  target="_blank">
-                  <FaShareSquare />
-                </a>
-          )))}
+          {/*
+          When I don't have links to my projects, I have fill the required 
+          field in the strapi entry with a / . I will, for now, not display 
+          any links for projects that I have not hosted somewhere. 
+          */}
+          {github !== "/" && (
+            <a href={github} target="_blank">
+              <FaGithubSquare />
+            </a>
+          )}
+          {url !== "/" && (
+            <a href={url} target="_blank">
+              <FaShareSquare />
+            </a>
+          )}
         </ProjectLinks>
       </ProjectInfo>
     </StyledProject>
   )
 }
 
-/*if you for example forget to set these fields in strapi,
-so if you forget to give them values, you will get a error in your console
-*/
 Project.propTypes = {
   title: PropTypes.string.isRequired,
   git: PropTypes.string.isRequired,

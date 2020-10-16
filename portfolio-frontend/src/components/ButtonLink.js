@@ -3,8 +3,9 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 /*
-     I have created a button/link component out of the global classes called 'btn' and 'center-btn'
-     The 
+     I have created a button/link component 
+     out of the global classes called 'btn' and 'center-btn'
+     If it is centered or not has become a prop... 
 */
 
 const StyledButtonLink = styled(props => <Link {...props} />)`

@@ -2,6 +2,8 @@ import React from "react"
 import SocialLinks from "../constants/socialLinks"
 import styled from "styled-components"
 
+// Here we define the Footer
+
 const StyledFooter = styled.footer`
   height: 9rem;
   background: #222;

@@ -7,7 +7,7 @@ const StyledTitle = styled.div`
   text-align: center;
   font-style: italic;
 `
-// The title that will be placed above each section
+// The title that will be placed at the top of each section
 
 const Title = ({ title }) => {
   return (
@@ -20,17 +20,4 @@ const Title = ({ title }) => {
 
 export default Title
 
-/*
-import React from "react"
 
-const Title = ({ title }) => {
-  return (
-    <div className="section-title">
-      <h2>{title || "default title"}</h2>
-      <div className="underline"></div>
-    </div>
-  )
-}
-
-export default Title
-*/

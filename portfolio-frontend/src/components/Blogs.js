@@ -1,10 +1,11 @@
 import React from "react"
 import Title from "./Title"
 import Blog from "./Blog"
-import { Link } from "gatsby"
 import OuterContentContainer from "./OuterContentContainer"
 import InnerContentContainer from "./InnerContentContainer"
 import ButtonLink from "./ButtonLink"
+
+// Here we define the blog section
 
 export const Blogs = ({ blogs, title, showLink }) => {
   return (

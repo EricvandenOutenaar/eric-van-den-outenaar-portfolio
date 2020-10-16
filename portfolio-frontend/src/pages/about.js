@@ -1,15 +1,14 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import Title from "../components/Title"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
 import ButtonLink from "../components/ButtonLink"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
 import downloadFile from "../../static/cv.pdf"
 import styled from "styled-components"  
-// ...GatsbyImageSharpFluid
+
+// Here we define the about page
 
 const StyledAboutPage = styled.section`
   background: ${({ theme }) => theme.colors.grey10};

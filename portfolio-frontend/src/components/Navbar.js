@@ -4,8 +4,11 @@ import { FaAlignRight } from "react-icons/fa"
 import Links from "../constants/links"
 import styled from "styled-components"
 
-// I have have changed this Navbar component so it has styled components
-
+/* 
+  This Nav-bar is a translation of the the Navbar-styling 
+  in the Main.css file (in the starter project) to Styled Components.
+  I have made some modifications where I thought they were needed.   
+*/
 const StyledNavBar = styled.nav`
   position: sticky;
   top: 0;
@@ -41,13 +44,12 @@ const NavHeader = styled.div`
   }
   @media screen and (min-width: 768px) {
     justify-content: space-between;
-    img {   
+    img {
       display: block;
       margin-bottom: 0.375rem;
-      }
     }
+  }
 `
-// This can be simplified later
 const NavLink = styled.div`
   ul {
     display: none;

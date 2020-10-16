@@ -5,6 +5,7 @@ import OuterContentContainer from "./OuterContentContainer"
 import InnerContentContainer from "./InnerContentContainer"
 import ButtonLink from "./ButtonLink"
 
+// Here we define the Projects section
 const Projects = ({ projects, title, showLink }) => {
   return (
     <OuterContentContainer>

@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+// Here we define the nav-buttons in the Jobs component
+
 const StyledJobButton = styled.button`
   background: transparent;
   border-color: transparent;
@@ -35,11 +37,7 @@ const StyledJobButton = styled.button`
       active && `-2px 0 ${theme.colors.primary5}}`};
   }
 `
-/*
-     I created a jobsbutton that can toggle between active and not active
-     I have created a render props in order to be able to use the SetValue function
-     of the parent component for the onclick event
-*/
+// A JobButton can toggle between active and not active
 
 const JobButton = ({ active, render = Function.prototype, item }) => {
   return (

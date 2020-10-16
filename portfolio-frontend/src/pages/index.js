@@ -7,7 +7,8 @@ import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
-import styled from "styled-components"
+
+// Here we define the homepage
 
 export default ({ data }) => {
   const {

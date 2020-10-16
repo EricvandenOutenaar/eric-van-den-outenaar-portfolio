@@ -6,6 +6,8 @@ import ButtonLink from "../components/ButtonLink"
 import SEO from "../components/SEO"
 import styled from "styled-components"
 
+// With the help of this template Gatsby will create a page for each blogpost
+
 const StyledBlogTemplate = styled.section`
   background: ${({ theme }) => theme.colors.grey10};
   min-height: calc(100vh - 5rem - 9rem);

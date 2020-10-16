@@ -6,6 +6,8 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa"
 
+// This was also a tricky component because of the animation
+
 const data = [
   {
     id: 1,

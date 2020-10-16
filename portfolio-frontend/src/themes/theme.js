@@ -1,3 +1,10 @@
+/*
+  My themes file. In a next iteration I want to go through
+  this and clean up things. I also want to add the mediaquery values
+  to this theme file. 
+  In addition, a further improvement would be to change all pixel values to rems... 
+*/
+
 export default {
   fonts: {
     primary: "Roboto, sans-serif",
@@ -52,12 +59,14 @@ export default {
     fixedWidth: "700px",
   },
   // this is a general class / section
+  // I need to look at this later - I don't think I use it actually
   section: {
     padding: "5rem 0",
   },
   // create generic values for setting minimal page heights
+  // Also a candidate for a clean up - to do: check if you even use this
   nonIndex: {
     minHeight: "calc(100vh - 5rem - 9rem)",
-    background: "var(--clr-grey-10)",
+    background: "hsl(210, 36%, 96%)",
   },
 }

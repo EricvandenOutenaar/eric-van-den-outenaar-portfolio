@@ -2,7 +2,14 @@ import React from "react"
 import { globalHistory } from "@reach/router"
 import { Link } from "gatsby"
 
-
+/*
+  A tricky component, because I hade to get the animations 
+  working in the right way.
+  I also use the globalHistory object of gatsby router in order
+  to check which page we are. I use this in the sidebar. 
+  If we are on the current page, don't show the link of that current 
+  page. See Readme-file for the motivation of this functionality.
+*/
 import styled from "styled-components"
 const data = [
   {
