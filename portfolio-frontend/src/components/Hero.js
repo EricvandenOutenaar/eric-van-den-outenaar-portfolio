@@ -76,9 +76,9 @@ const Hero = () => {
             <h1>Jag heter Eric </h1>
             <Underline hero/> 
             <h4>Din nya systemutvecklare</h4>
-            - 🔭 Jag läser till Systemutvecklare.net
+            - 🔭 Jag läser mitt sista år av utbildningen Systemutvecklare.net
             <br />
-            - 🌱 Jobbar extra som React-utvecklare 
+            - 🌱 Jag jobbar extra som React-utvecklare 
             <br />
             - 🤔 Intresserad av både frontend och backend
             <br />

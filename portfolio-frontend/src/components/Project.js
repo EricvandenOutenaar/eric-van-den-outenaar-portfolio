@@ -123,12 +123,18 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
           })}
         </ProjectStack>
         <ProjectLinks>
-          <a href={github}>
-            <FaGithubSquare />
-          </a>
-          <a href={url}>
-            <FaShareSquare />
-          </a>
+          {/*If I don't links my projects - in db gave it a home link - 
+          then I will not display a social link for now */}
+          {github   !==   "/" && (((
+                <a href={github} target="_blank">
+                  <FaGithubSquare />
+                </a>
+          )))}
+          {url   !==   "/" && (((
+                <a href={url}  target="_blank">
+                  <FaShareSquare />
+                </a>
+          )))}
         </ProjectLinks>
       </ProjectInfo>
     </StyledProject>

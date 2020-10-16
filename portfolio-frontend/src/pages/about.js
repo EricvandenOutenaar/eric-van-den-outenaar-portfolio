@@ -76,7 +76,7 @@ const About = ({
         <AboutContentContainer>
           <StyledAboutImage fluid={image.childImageSharp.fluid} />
           <AboutTextContainer>
-             {/* <Title title={title} */}
+            {/* <Title title={title} */}
             {/*<p>{info}</p>*/}
             <ReactMarkdown source={info} />
             <StyledStack>
@@ -87,7 +87,7 @@ const About = ({
 
             <button>
               <a href={downloadFile} download>
-                Ladda ner fullständig CV
+                Ladda ner fullständigt CV
               </a>
               {` `}
             </button>

@@ -83,7 +83,6 @@ a {
 
 export default ({type="navbar"}) => {
   const path = globalHistory.location.pathname
-  console.log("path test", path)
   return type === "sidebar" ? (
     <StyledSideBarList>
       {data.map(link => 
