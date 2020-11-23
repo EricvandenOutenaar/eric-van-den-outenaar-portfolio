@@ -30,9 +30,12 @@ const StyledButtonLink = styled(props => <Link {...props} />)`
     margin-top: ${({ center }) => center && "3rem"};
   
   &:hover {
-    color:${({ theme }) => theme.colors.primary1}
     background: ${({ theme }) => theme.colors.primary8};
+    color:${({ theme }) => theme.colors.primary1}
+    
   }
+
+ 
 
 `
 

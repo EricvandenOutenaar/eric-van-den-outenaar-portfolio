@@ -18,13 +18,19 @@ const CVContainer = styled.section`
     margin: 2rem 0 0 0;
   }
 `
-const CVButton = styled.button``
+const CVButton = styled.button`
+a{
+    color: ${({ theme }) => theme.colors.primary9};
+    &:hover {
+      color:${({ theme }) => theme.colors.primary1}
+       
+  }`
 const CVPage = () => {
   return (
     <Layout>
       <SEO title="CV" description="Erics CV" />
       <CVContainer>
-        <h2>Vill du veta mer om mitt arbetslivserfarenhet?</h2>
+        <h2>Vill du veta mer om min arbetslivserfarenhet?</h2>
         <CVButton>
           <a href={downloadFile} download>
             Ladda ner mitt fullständiga CV

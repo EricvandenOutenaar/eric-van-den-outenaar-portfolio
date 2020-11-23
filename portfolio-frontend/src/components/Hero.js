@@ -50,25 +50,14 @@ const HeroInfo = styled.article`
   }
 `
 const StyledButton = styled.button`
-text-transform: uppercase;
-background: ${({ theme }) => theme.colors.primary5};;
-color: ${({ theme }) => theme.colors.primary9};
-padding: 0.375rem 0.75rem;
-letter-spacing: ${({ theme }) => theme.spacings.spacing};
-font-weight: 700;
--webkit-transition: ${({ theme }) => theme.transitions.transition};
-transition: ${({ theme }) => theme.transitions.transition};
-font-size: 0.875rem;
-border: 2px solid transparent;
-cursor: pointer;
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-border-radius: ${({ theme }) => theme.radius.radius};
-display: inline-block;
 margin: 0.3rem 1rem 0.3rem 0;
-&:hover {
-color:${({ theme }) => theme.colors.primary1}
-background: ${({ theme }) => theme.colors.primary8};
 
+a{
+  color: ${({ theme }) => theme.colors.primary9};
+  &:hover {
+    color:${({ theme }) => theme.colors.primary1}
+     
+}
 `
 
 const query = graphql`
@@ -108,11 +97,14 @@ const Hero = () => {
             {
               // <ButtonLink to="/contact" name="Kontakta mig" />
             }
-            <StyledButton href={downloadFile} download>
+            <StyledButton>
+              <a href={downloadFile} download>
               Ladda ner CV direkt
+              </a>
+              {` `}
+              
             </StyledButton>
-             
-            <StyledButton onClick={() => scrollTo('#services')}>
+            <StyledButton onClick={() => scrollTo("#services")}>
               Vad jag erbjuder
             </StyledButton>
             <div style={{ marginBottom: "1rem" }} />

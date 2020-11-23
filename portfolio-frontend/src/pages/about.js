@@ -60,6 +60,13 @@ const StyledStack = styled.div`
     font-size: 0.85rem;
   }
 `
+const CVButton = styled.button`
+a{
+    color: ${({ theme }) => theme.colors.primary9};
+    &:hover {
+      color:${({ theme }) => theme.colors.primary1}
+       
+  }`
 
 const About = ({
   data: {
@@ -84,12 +91,12 @@ const About = ({
               })}
             </StyledStack>
 
-            <button>
+            <CVButton>
               <a href={downloadFile} download>
                 Ladda ner fullständigt CV
               </a>
               {` `}
-            </button>
+            </CVButton>
             <ButtonLink name="kontakta mig" to="/contact" />
           </AboutTextContainer>
         </AboutContentContainer>
