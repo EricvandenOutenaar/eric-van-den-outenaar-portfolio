@@ -19,21 +19,26 @@ const data = [
   },
   {
     id: 2,
-    text: "mitt CV",
+    text: "Om mig",
     url: "/about/",
   },
   {
     id: 3,
+    text: "Mitt cv",
+    url: "/cv/",
+  },
+  {
+    id: 4,
     text: "projekt",
     url: "/projects/",
   },
   {
-    id: 4,
+    id: 5,
     text: "blogg",
     url: "/blog/",
   },
   {
-    id: 5,
+    id: 6,
     text: "kontakt",
     url: "/contact/",
   },

@@ -8,9 +8,9 @@ import styled from "styled-components"
 const StyledContactPage = styled.section`
   display: grid;
   place-items: center;
-  padding: 5rem 0;
+  padding-top: 5rem 0;
   background: ${({ theme }) => theme.colors.grey10};
-  min-height: calc(100vh - 5rem - 9rem);
+  min-height: calc(100vh);
 `
 const StyledContactForm = styled.article`
   background: ${({ theme }) => theme.colors.white};

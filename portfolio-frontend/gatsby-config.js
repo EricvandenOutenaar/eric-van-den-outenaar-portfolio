@@ -19,6 +19,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -41,18 +42,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: { 
+        fonts: {
           google: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Open Sans`,
-          },
-        ],
+            {
+              family: `Roboto`,
+              variants: [`400`, `700`],
+            },
+            {
+              family: `Open Sans`,
+            },
+          ],
+        },
       },
     },
-  }
   ],
 }

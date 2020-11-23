@@ -88,7 +88,7 @@ const Jobs = () => {
           })}
         </JobInfo>
       </InnerContentContainer>
-      <ButtonLink to="/about" center name="Mitt CV" />
+      <ButtonLink to="/cv" center name="Mitt CV" />
     </OuterContentContainer>
   )
 }

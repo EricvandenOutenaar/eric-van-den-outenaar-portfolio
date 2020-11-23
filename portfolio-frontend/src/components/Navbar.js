@@ -10,7 +10,7 @@ import styled from "styled-components"
   I have made some modifications where I thought they were needed.   
 */
 const StyledNavBar = styled.nav`
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;

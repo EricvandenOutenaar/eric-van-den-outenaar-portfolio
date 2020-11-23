@@ -70,7 +70,7 @@ const About = ({
   const { info, stack, title, image } = nodes[0]
   return (
     <Layout>
-      <SEO title="CV" description="Erics CV" />
+      <SEO title="About me" description="About me" />
       <StyledAboutPage>
         <AboutContentContainer>
           <StyledAboutImage fluid={image.childImageSharp.fluid} />

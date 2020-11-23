@@ -8,6 +8,7 @@ import styled from "styled-components"
 const StyledBlogContainer = styled.section`
   background: ${({ theme }) => theme.colors.grey10};
   min-height: calc(100vh - 5rem - 9rem);
+  padding-top: 5rem;
 `
 
 const Blog = ({

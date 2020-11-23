@@ -7,8 +7,11 @@ import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
+import styled from "styled-components"
 
 // Here we define the homepage
+
+const ScrollContainer = styled.div``
 
 export default ({ data }) => {
   const {
@@ -20,6 +23,7 @@ export default ({ data }) => {
       <Layout>
         <SEO title="Hem" description="Startsidan" />
         <Hero />
+        <ScrollContainer id="services" />
         <Services />
         <Jobs />
         <Projects projects={projects} title="projekt i fokus" showLink />

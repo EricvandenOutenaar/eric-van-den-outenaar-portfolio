@@ -9,7 +9,8 @@ import styled from "styled-components"
 
 const ProjectsContainer = styled.section`
   background: ${({ theme }) => theme.colors.grey10};
-  min-height: calc(100vh - 5rem - 9rem);
+  min-height: calc(100vh - 5rem);
+  padding-top: 5rem;
 `
 
 const ProjectsPage = ({
