@@ -49,7 +49,7 @@ const HeroInfo = styled.article`
     grid-row: 3 / auto;
   }
 `
-const StyledButton = styled.a`
+const StyledButton = styled.button`
 text-transform: uppercase;
 background: ${({ theme }) => theme.colors.primary5};;
 color: ${({ theme }) => theme.colors.primary9};
@@ -63,15 +63,12 @@ border: 2px solid transparent;
 cursor: pointer;
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 border-radius: ${({ theme }) => theme.radius.radius};
-display: ${({ center }) => (center ? "block" : "inline-block")};
-width: ${({ center }) => center && "12rem"};
-text-align: ${({ center }) => center && "center"};
-margin: ${({ center }) => (center ? "0 auto" : "0 1rem 0 0")};
-margin-top: ${({ center }) => center && "3rem"};
+display: inline-block;
+margin: 0.3rem 1rem 0.3rem 0;
 &:hover {
 color:${({ theme }) => theme.colors.primary1}
 background: ${({ theme }) => theme.colors.primary8};
-}
+
 `
 
 const query = graphql`
