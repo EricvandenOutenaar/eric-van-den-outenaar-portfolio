@@ -27,6 +27,6 @@ export default [
     id: 3,
     icon: <FaAndroid style={iconStyle} />,
     title: "Testning",
-    text: `Jag kan också hjälpa er med testning av mjukvara. Jag har lärt mig om test driven utveckling (TDD) och ska snart fördjupa mig vidare i testning och certifiering av mjukvara.`,
+    text: `Jag kan också hjälpa er med testning av mjukvara. Jag har lärt mig om test driven utveckling (TDD) och haft en kurs i testning och certifiering av mjukvara.`,
   },
 ]

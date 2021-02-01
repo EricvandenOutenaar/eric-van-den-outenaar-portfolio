@@ -81,9 +81,32 @@ a {
   }
   `
   const StyledNavBarList = styled.ul`
-  a{
-    font-size: 1rem;
+
+  display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin-right: 2rem;
+      }
+      a {
+        font-size: 1rem;
+        text-transform: capitalize;
+        color: ${({ theme }) => theme.colors.white};
+        font-weight: bold;
+        letter-spacing: ${({ theme }) => theme.spacings.spacing};
+        transition: ${({ theme }) => theme.transitions.transition};
+        padding: 0.5rem 0;
+
+        &:hover {
+          color: ${({ theme }) => theme.colors.primary5};
+          box-shadow: 0px 2px ${({ theme }) => theme.colors.primary5};
+        }
+      }
+    }
   }
+
   ` 
   const tempLinks = data.map(link => {
     return (

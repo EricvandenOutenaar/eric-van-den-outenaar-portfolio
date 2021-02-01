@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.5;
         font-size: 0.875rem;
         margin-top: 0rem;
+    }
         
         h1,
         h2,
@@ -75,7 +76,7 @@ const GlobalStyles = createGlobalStyle`
         a {
           text-decoration: none;
         }
-      }
+      
       
       @keyframes slideRight {
         0% {
@@ -122,7 +123,7 @@ const GlobalStyles = createGlobalStyle`
       p {
         margin-bottom: 1.25rem;
         color: ${({ theme }) => theme.colors.grey3};
-      },
+      }
     
       
       section {

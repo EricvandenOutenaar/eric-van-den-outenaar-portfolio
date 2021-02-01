@@ -14,11 +14,11 @@ module.exports = {
     siteUrl: "https://eric-vanden-outenaar-portfolio.netlify.app",
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-filesystem`,

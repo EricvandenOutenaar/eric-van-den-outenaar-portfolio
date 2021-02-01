@@ -102,9 +102,9 @@ export const Navbar = ({ toggleSidebar }) => {
             <FaAlignRight></FaAlignRight>
           </ToggleButton>
         </NavHeader>
-        <NavLink>
+       
           <Links type="navbar"/>
-        </NavLink>
+        
       </NavCenter>
     </StyledNavBar>
   )

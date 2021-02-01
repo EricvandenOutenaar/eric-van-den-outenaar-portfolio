@@ -91,6 +91,10 @@ const Hero = () => {
             <br />
             - 🌱 Jag jobbar extra som React-utvecklare
             <br />
+          
+            - 🌱 Bygger en AdminPortal som exjobb (LDAP server,C#.Net5
+            Api,React frontend)
+            <br />
             - 🤔 Intresserad av både frontend och backend
             <br />
             <div style={{ marginBottom: "1rem" }} />
@@ -99,10 +103,9 @@ const Hero = () => {
             }
             <StyledButton>
               <a href={downloadFile} download>
-              Ladda ner CV direkt
+                Ladda ner CV direkt
               </a>
               {` `}
-              
             </StyledButton>
             <StyledButton onClick={() => scrollTo("#services")}>
               Vad jag erbjuder
