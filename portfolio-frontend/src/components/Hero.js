@@ -47,6 +47,7 @@ const HeroInfo = styled.article`
   @media screen and (min-width: 992px) {
     grid-column: 5 / span 8;
     grid-row: 3 / auto;
+    padding-left: 2rem;
   }
 `
 const StyledButton = styled.button`
